@@ -39,20 +39,20 @@ mainGallery.addEventListener('click', (evt) => {
     alt="${itemImage.alt}"
     />
     </div>`, {
-        onClose: (instance) => {
-           return true;
-    }})
-    instance.show()
-    // bodyEl.classList.add('noscroll')
-    // console.log("🚀", itemImage.attributes)
-    // console.log("🚀", itemImage.alt)
-    closeOnEscape();
-
+                onShow: () =>  bodyEl.classList.add('noscroll') ,
+                onClose: () => bodyEl.classList.remove('noscroll'),
+                closable: false,
+              })
+  instance.show();
+  
+  document.addEventListener("keydown", (evt) => {
+    if (evt.code === 'Escape') {
+      instance.close();
+    }
+  });
+  
+  const modalEl = document.querySelector('.modal');
+  modalEl.classList.add('gallery__modal');
+  
 })
-// function closeOnEscape() {
-//     const modalEL = document.querySelector('.modal');
-//     modalEL.addEventListener('keydown', (evt) => {
-//         console.log(evt);
-//     })
-// }    
-console.log(galleryItems);
+

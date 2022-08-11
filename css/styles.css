@@ -42,6 +42,16 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
 .noscroll {
-  position: fixed !important;
+  height: 100%;
+  overflow-y: hidden;
+}
+.gallery__modal {
+  border: 2px solid white;
+  height: 90vh;
+  width: 80vw;
+}
+.gallery__modal .gallery__image:hover {
+  transform: scale(1);
 }
