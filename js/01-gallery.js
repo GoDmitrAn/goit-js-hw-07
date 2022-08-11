@@ -6,16 +6,16 @@ const bodyEl = document.querySelector('body');
 function createItemTemplate({preview, original,description}) {
     
     const template = `
-    <div class="gallery__item">
-  <a class="gallery__link" href="${original}">
-    <img
-      class="gallery__image"
-      src="${preview}"
-      data-source="${original}"
-      alt="${description}"
-    />
-  </a>
-</div>`;
+      <div class="gallery__item">
+      <a class="gallery__link" href="${original}">
+      <img
+        class="gallery__image"
+        src="${preview}"
+        data-source="${original}"
+        alt="${description}"
+      />
+      </a>
+      </div>`;
     return template;
     
 }
