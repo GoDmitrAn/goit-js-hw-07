@@ -41,7 +41,7 @@ mainGallery.addEventListener('click', (evt) => {
     </div>`, {
                 onShow: () =>  bodyEl.classList.add('noscroll') ,
                 onClose: () => bodyEl.classList.remove('noscroll'),
-                closable: false,
+                
               })
   instance.show();
   
