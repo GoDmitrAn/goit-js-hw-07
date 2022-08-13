@@ -56,3 +56,8 @@
 .gallery__modal .gallery__image:hover {
   transform: scale(1);
 }
+
+.gallery .gallery__item {
+  display: block;
+  height: 100%;
+}
